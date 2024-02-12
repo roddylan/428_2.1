@@ -12,7 +12,7 @@ def clear(cam: cv2.VideoCapture):
     cam.release()
     cv2.destroyAllWindows()
 
-def capture_video(cam: cv2.VideoCapture):
+def capture_video(cam: cv2.VideoCapture, path):
     Im = []
     # cam = cv2.VideoCapture(1)
     cv2.namedWindow("capture")
@@ -21,7 +21,7 @@ def capture_video(cam: cv2.VideoCapture):
     # IMG_PATH = "imgs"
 
     # folder clean up
-    G_IMG_PATH = "g_imgs"
+    G_IMG_PATH = path
     try:
         shutil.rmtree(G_IMG_PATH)
         # shutil.rmtree('video_pyr')
@@ -74,4 +74,4 @@ def capture_video(cam: cv2.VideoCapture):
 if __name__ == "__main__":
     c = cv2.VideoCapture(1)
 
-    capture_video(c)
+    capture_video(c, "2c_par_in")

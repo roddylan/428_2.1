@@ -27,5 +27,6 @@ def create_video(src, name, fps=24):
 
 
 if __name__ == "__main__":
-    create_folder()
-    create_video("2b_out", "2b.mp4")
+    # create_folder()
+    # create_video("2c_par_out", "2c_par_out.mp4")
+    pass
